@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  silkroad:
+
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    container_name: jhattai_rms
+    ports:
+      - "4000:3000"
+    volumes:
+      - ./:/app
